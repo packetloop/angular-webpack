@@ -4,6 +4,7 @@
   "description": "Angular + Webpack build with Karma tests support",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "node ./node_modules/karma/bin/karma start ./karma.conf.js --single-run"
   },
   "author": {
