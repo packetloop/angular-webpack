@@ -2,8 +2,23 @@
 
 Angular + Webpack build with Karma tests support
 
+### Install
 
-## TODO
+```
+git clone git@github.com:packetloop/angular-webpack.git
+cd angular-webpack
+npm install
+npm run build
+```
+
+Then open `index.html`
+
+To run tests
+```
+npm test
+```
+
+### TODO
 
 - [x] Build basic Angular app with webpack
 - [x] Couple of dependent modules `Hello` and `Blah`
