@@ -1,5 +1,7 @@
 # angular-webpack
 
+[![Gitter](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/packetloop/angular-webpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Angular + Webpack build with Karma tests support
 
 ### Install
