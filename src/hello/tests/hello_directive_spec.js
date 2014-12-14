@@ -23,4 +23,12 @@ describe('Hello Directive', function () {
     expect($element.html()).toEqual('test');
   });
 
+  it('should apply styles from hello.sass', function () {
+    var styles;
+
+    window.document.body.appendChild($element[0]);
+    styles = window.getComputedStyle($element[0]);
+    expect(styles['background-color']).toEqual('rgb(255, 0, 0)');
+    window.document.body.removeChild($element[0]);
+  });
 });

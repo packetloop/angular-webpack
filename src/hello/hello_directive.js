@@ -1,3 +1,5 @@
+require('./hello.sass');
+
 var $inject = ['HelloService'];
 var Hello = function (helloService) {
 
@@ -8,7 +10,7 @@ var Hello = function (helloService) {
 
 
   return {
-    template: '{{hello}}',
+    template: require('./hello.html'),
     restrict: 'E',
     link: link,
     scope: {}

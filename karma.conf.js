@@ -15,7 +15,9 @@ module.exports = function (config) {
       devtool: 'eval',
       watch: false
     },
-    exclude: [],
+    exclude: [
+      '*.sass'
+    ],
     preprocessors: {
       'test/webpack.js': ['webpack']
     },

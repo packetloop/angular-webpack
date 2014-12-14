@@ -27,6 +27,6 @@ npm test
 - [x] Tests for `<hello>` directive mocking `HelloService`
 - [x] Tests for `HelloController` mocking `HelloService`
 - [x] `npm test` script with CI-friendly karma + webpack run
-- [ ] Separate HTML template for `<hello>` + webpack build
-- [ ] Separate CSS for `<hello>` + webpack build
+- [x] Separate HTML template for `<hello>` + webpack build
+- [x] Separate CSS for `<hello>` + webpack build
 - [ ] Coverage report

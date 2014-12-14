@@ -16,8 +16,12 @@ module.exports = {
     }
   },
   module: {
+    loaders: [
+      {test: /\.sass$/, loader: 'style!css!sass?indentedSyntax=true'},
+      {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'}
+    ],
     noParse: [
-      /node_modules/
+      /node_modules\/angular/
     ]
   },
   devtool: 'eval'
