@@ -30,6 +30,6 @@ npm test
 - [x] Separate HTML template for `<hello>` + webpack build
 - [x] Separate CSS for `<hello>` + webpack build
 - [ ] Embed images
-- [ ] Coverage report
+- [x] Coverage report
 - [ ] One more page + webpack entry to load additional components asynchronously
 - [ ] Gulp + JSHint + Flow
