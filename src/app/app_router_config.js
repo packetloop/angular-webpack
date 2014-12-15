@@ -1,15 +1,37 @@
 'use strict';
 
+function route(entry, resolve) {
+  return {
+    template: '<' + entry + '></' + entry + '>',
+    resolve: {
+      async: ['$q', function ($q) {
+        var defer = $q.defer();
+        resolve(defer.resolve);
+        return defer.promise;
+      }]
+    }
+  };
+}
+
+
 module.exports = function (app) {
 
   var $inject = ['$routeProvider'];
   var RouterConfig = function ($routeProvider) {
     $routeProvider
       .when('/', {template: ''})
-      .when('/home', require('./home/home_route')(app))
-      .when('/about', require('./about/about_route')(app))
-      .otherwise({redirectTo: '/'})
-    ;
+      .when('/home', route('home', function (callback) {
+        require.ensure([], function () {
+          // We have to use hardcoded value for 'require' so it can be statically built
+          callback(app.register(require('./home')));
+        });
+      }))
+      .when('/about', route('about', function (callback) {
+        require.ensure([], function () {
+          callback(app.register(require('./about')));
+        });
+      }))
+      .otherwise({redirectTo: '/'});
   };
 
   RouterConfig.$inject = $inject;

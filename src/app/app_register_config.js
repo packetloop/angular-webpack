@@ -12,7 +12,7 @@ module.exports = function (app) {
     };
     app.register = function (module) {
 
-      module.requires.forEach(function(moduleName) {
+      module.requires.forEach(function (moduleName) {
         app.register(angular.module(moduleName));
       });
 

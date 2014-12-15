@@ -5,5 +5,6 @@ var about = angular.module('app.about', [
 ]);
 
 about.controller('AboutController', require('./about_controller'));
+about.directive('about', require('./about_directive'));
 
 module.exports = about;
