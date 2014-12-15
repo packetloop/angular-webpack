@@ -1,1 +1,10 @@
 <div>{{this.name}}</div>
+
+<div>
+  HelloDirective:
+  <hello></hello>
+</div>
+
+<div ng-controller="HelloController as hello">
+  HelloController as hello: {{hello.test}}
+</div>
