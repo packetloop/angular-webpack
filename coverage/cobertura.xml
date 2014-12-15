@@ -1,0 +1,121 @@
+<?xml version="1.0" ?>
+<!DOCTYPE coverage SYSTEM "http://cobertura.sourceforge.net/xml/coverage-04.dtd">
+<coverage lines-valid="35"  lines-covered="33"  line-rate="0.9429000000000001"  branches-valid="0"  branches-covered="0"  branch-rate="1"  timestamp="1438689636425" complexity="0" version="0.1">
+<sources>
+	<source>/Users/nkbt/nkbt/angular-webpack</source>
+</sources>
+<packages>
+	<package name="blah"  line-rate="0.8889"  branch-rate="1" >
+	<classes>
+		<class name="blah_service.js"  filename="src/blah/blah_service.js"  line-rate="0.8332999999999999"  branch-rate="1" >
+		<methods>
+			<method name="BlahService"  hits="0"  signature="()V" >
+				<lines><line number="4"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="0"  signature="()V" >
+				<lines><line number="5"  hits="0" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="0"  hits="1"  branch="false" />
+			<line number="1"  hits="1"  branch="false" />
+			<line number="2"  hits="1"  branch="false" />
+			<line number="3"  hits="0"  branch="false" />
+			<line number="6"  hits="1"  branch="false" />
+			<line number="8"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="index.js"  filename="src/blah/index.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="1"  hits="1"  branch="false" />
+			<line number="3"  hits="1"  branch="false" />
+			<line number="6"  hits="1"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+	<package name="hello"  line-rate="0.9615"  branch-rate="1" >
+	<classes>
+		<class name="hello_controller.js"  filename="src/hello/hello_controller.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="HelloController"  hits="1"  signature="()V" >
+				<lines><line number="4"  hits="1" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="1"  hits="1"  branch="false" />
+			<line number="2"  hits="1"  branch="false" />
+			<line number="3"  hits="1"  branch="false" />
+			<line number="6"  hits="1"  branch="false" />
+			<line number="8"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="hello_directive.js"  filename="src/hello/hello_directive.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="Hello"  hits="2"  signature="()V" >
+				<lines><line number="9"  hits="2" /></lines>
+			</method>
+			<method name="link"  hits="2"  signature="()V" >
+				<lines><line number="10"  hits="2" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="0"  hits="1"  branch="false" />
+			<line number="1"  hits="1"  branch="false" />
+			<line number="3"  hits="1"  branch="false" />
+			<line number="4"  hits="1"  branch="false" />
+			<line number="5"  hits="2"  branch="false" />
+			<line number="6"  hits="2"  branch="false" />
+			<line number="9"  hits="2"  branch="false" />
+			<line number="17"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="hello_hello_service.js"  filename="src/hello/hello_hello_service.js"  line-rate="0.8"  branch-rate="1" >
+		<methods>
+			<method name="HelloHelloService"  hits="0"  signature="()V" >
+				<lines><line number="7"  hits="0" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="0"  signature="()V" >
+				<lines><line number="8"  hits="0" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="0"  hits="1"  branch="false" />
+			<line number="1"  hits="1"  branch="false" />
+			<line number="2"  hits="1"  branch="false" />
+			<line number="3"  hits="0"  branch="false" />
+			<line number="6"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="hello_service.js"  filename="src/hello/hello_service.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+			<method name="HelloService"  hits="4"  signature="()V" >
+				<lines><line number="7"  hits="4" /></lines>
+			</method>
+			<method name="(anonymous_2)"  hits="3"  signature="()V" >
+				<lines><line number="8"  hits="3" /></lines>
+			</method>
+		</methods>
+		<lines>
+			<line number="0"  hits="3"  branch="false" />
+			<line number="1"  hits="1"  branch="false" />
+			<line number="2"  hits="1"  branch="false" />
+			<line number="3"  hits="4"  branch="false" />
+			<line number="6"  hits="1"  branch="false" />
+		</lines>
+		</class>
+		<class name="index.js"  filename="src/hello/index.js"  line-rate="1"  branch-rate="1" >
+		<methods>
+		</methods>
+		<lines>
+			<line number="1"  hits="1"  branch="false" />
+			<line number="5"  hits="1"  branch="false" />
+			<line number="11"  hits="1"  branch="false" />
+		</lines>
+		</class>
+	</classes>
+	</package>
+</packages>
+</coverage>
