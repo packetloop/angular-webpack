@@ -7,7 +7,8 @@ module.exports = {
   output: {
     filename: '[name].js',
     path: './dest',
-    publicPath: '/dest/'
+    publicPath: './dest/',
+    chunkFilename: '[id].chunk.js'
   },
   resolve: {
     modulesDirectories: ['node_modules'],

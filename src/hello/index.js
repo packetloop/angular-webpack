@@ -1,7 +1,7 @@
 var angular = require('vendor/angular');
 
 var hello = angular.module('hello', [
-  require('./../blah/blah_module').name
+  require('./../blah').name
 ]);
 
 hello

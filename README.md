@@ -33,5 +33,5 @@ npm test
 - [x] Separate CSS for `<hello>` + webpack build
 - [ ] Embed images
 - [x] Coverage report
-- [ ] One more page + webpack entry to load additional components asynchronously
+- [x] Multiple pages to load additional components asynchronously
 - [ ] Gulp + JSHint + Flow

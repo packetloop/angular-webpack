@@ -1,4 +1,5 @@
 if (!global.window.angular) {
   require('angular');
 }
-module.exports = global.window.angular;
+var angular = global.window.angular;
+module.exports = angular;

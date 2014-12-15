@@ -5,14 +5,15 @@
   <title></title>
   <script src="./dest/app.js"></script>
 </head>
-<body ng-app="app">
+<body ng-app="app" ng-strict-di>
 
+<ul>
+  <li><a href="#/">Start</a></li>
+  <li><a href="#/home">Home</a></li>
+  <li><a href="#/about">About</a></li>
+</ul>
 
-<div ng-controller="HelloController as hello">
-  {{hello.test}}
-</div>
-
-<hello></hello>
+<ng-view></ng-view>
 
 </body>
 </html>

@@ -5,7 +5,7 @@ describe('Hello Service', function () {
   var helloHelloService;
   var blahService;
 
-  beforeEach(angular.mock.module(require('./../hello_module').name));
+  beforeEach(angular.mock.module(require('./..').name));
 
   beforeEach(angular.mock.module(function ($provide) {
     helloHelloService = jasmine.createSpyObj('HelloHelloService', ['hello']);
