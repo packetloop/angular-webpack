@@ -30,11 +30,14 @@ module.exports = function (config) {
     reporters: ['progress', 'coverage'],
     coverageReporter: {
       dir: 'coverage/',
+      subdir: function (browser) {
+        return browser.toLowerCase().split(/[ /-]/)[0];
+      },
       reporters: [
-        {type: 'cobertura', subdir: '.', file: 'cobertura.xml'},
-        {type: 'text', subdir: '.', file: 'text.txt'},
-        {type: 'text-summary', subdir: '.', file: 'text-summary.txt'},
-        {type: 'html', subdir: 'html'}
+        {type: 'cobertura', file: 'cobertura.xml'},
+        {type: 'text', file: 'text.txt'},
+        {type: 'text-summary', file: 'text-summary.txt'},
+        {type: 'html'}
       ]
     },
     port: 9876,
