@@ -1,4 +1,4 @@
-var webpack = require('webpack');
+'use strict';
 
 module.exports = {
   entry: {
@@ -19,6 +19,7 @@ module.exports = {
   module: {
     loaders: [
       {test: /\.sass$/, loader: 'style!css!sass?indentedSyntax=true'},
+      {test: /\.(png|jpg)$/, loader: 'url?limit=32768'},
       {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'}
     ],
     noParse: [

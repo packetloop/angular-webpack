@@ -1,3 +1,5 @@
+'use strict';
+
 require('./hello.sass');
 
 var $inject = ['HelloService'];
@@ -14,7 +16,7 @@ var Hello = function (helloService) {
     restrict: 'E',
     link: link,
     scope: {}
-  }
+  };
 
 };
 Hello.$inject = $inject;

@@ -1,3 +1,5 @@
+'use strict';
+
 var $inject = ['HelloService'];
 var HelloController = function(helloService) {
   this.test = helloService.hello();

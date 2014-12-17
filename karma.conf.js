@@ -1,3 +1,5 @@
+'use strict';
+
 var webpackConfig = require('./webpack.config');
 webpackConfig.cache = true;
 webpackConfig.module.postLoaders = [{

@@ -1,11 +1,13 @@
-describe('Hello Directive', function () {
-  'use strict';
+'use strict';
 
+var angular = require('vendor/angular');
+
+describe('Hello Directive', function () {
   var helloService;
   var $scope;
   var $element;
 
-  beforeEach(angular.mock.module(require('./..').name));
+  beforeEach(angular.mock.module(require('./index.js').name));
 
   beforeEach(angular.mock.module(function ($provide) {
     helloService = jasmine.createSpyObj('HelloService', ['hello']);

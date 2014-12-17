@@ -1,3 +1,5 @@
+'use strict';
+
 var angular = require('vendor/angular');
 var app = angular.module('app', [
   require('vendor/angular_route').name

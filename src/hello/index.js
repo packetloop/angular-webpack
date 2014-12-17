@@ -1,7 +1,9 @@
+'use strict';
+
 var angular = require('vendor/angular');
 
 var hello = angular.module('hello', [
-  require('./../blah').name
+  require('./../blah/index').name
 ]);
 
 hello

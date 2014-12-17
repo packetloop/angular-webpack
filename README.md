@@ -31,7 +31,7 @@ npm test
 - [x] `npm test` script with CI-friendly karma + webpack run
 - [x] Separate HTML template for `<hello>` + webpack build
 - [x] Separate CSS for `<hello>` + webpack build
-- [ ] Embed images
+- [x] Embed images
 - [x] Coverage report
 - [x] Multiple pages to load additional components asynchronously
-- [ ] Gulp + JSHint + Flow
+- [x] Gulp + JSHint

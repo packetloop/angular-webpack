@@ -1,3 +1,5 @@
+'use strict';
+
 if (!global.window.angular) {
   require('angular');
 }

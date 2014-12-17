@@ -1,3 +1,5 @@
+'use strict';
+
 function HelloHelloService() {
   this.hello = function () {
     return 'hello';

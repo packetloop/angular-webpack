@@ -1,3 +1,5 @@
+'use strict';
+
 var angular = require('vendor/angular');
 
 var home = angular.module('app.home', [

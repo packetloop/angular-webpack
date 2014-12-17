@@ -1,3 +1,5 @@
+'use strict';
+
 var angular = require('vendor/angular');
 
 var about = angular.module('app.about', [

@@ -1,7 +1,8 @@
 'use strict';
 
-module.exports = function (app) {
+var angular = require('vendor/angular');
 
+module.exports = function (app) {
   var $inject = ['$controllerProvider', '$provide', '$compileProvider', '$filterProvider'];
   var RegisterConfig = function ($controllerProvider, $provide, $compileProvider, $filterProvider) {
     var providers = {
