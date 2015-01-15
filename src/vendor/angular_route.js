@@ -1,5 +1,5 @@
 'use strict';
 
-var angular = require('./angular');
-require('angular-route');
+var angular = require('vendor/angular');
+require('npm/angular-route/angular-route');
 module.exports = angular.module('ngRoute');

@@ -13,6 +13,7 @@ module.exports = {
   resolve: {
     modulesDirectories: ['node_modules'],
     alias: {
+      'npm': __dirname + '/node_modules',
       'vendor': __dirname + '/src/vendor/'
     }
   },
