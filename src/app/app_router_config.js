@@ -31,6 +31,11 @@ module.exports = function (app) {
           callback(app.register(require('./about')));
         });
       }))
+      .when('/haml', route('haml', function (callback) {
+        require.ensure([], function () {
+          callback(app.register(require('./haml')));
+        });
+      }))
       .otherwise({redirectTo: '/'});
   };
 

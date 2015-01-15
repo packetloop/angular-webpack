@@ -21,7 +21,8 @@ module.exports = {
     loaders: [
       {test: /\.sass$/, loader: 'style!css!sass?indentedSyntax=true'},
       {test: /\.(png|jpg)$/, loader: 'url?limit=32768'},
-      {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'}
+      {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'},
+      {test: /\.haml$/, loader: 'hamlc-loader'}
     ],
     noParse: [
       /node_modules\/angular/

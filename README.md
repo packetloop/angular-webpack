@@ -35,3 +35,5 @@ npm test
 - [x] Coverage report
 - [x] Multiple pages to load additional components asynchronously
 - [x] Gulp + JSHint
+- [ ] FIX dynamic Angular modules loading (see issue #2)
+- [x] Allow to use HAML templates
