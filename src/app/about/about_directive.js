@@ -4,7 +4,7 @@ var $inject = [];
 var about = function () {
   return {
     controller: 'AboutController',
-    controllerAs: 'this',
+    controllerAs: 'controller',
     template: require('./about.html')
   };
 };

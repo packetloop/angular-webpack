@@ -6,7 +6,7 @@ var $inject = [];
 var home = function () {
   return {
     controller: 'HomeController',
-    controllerAs: 'home',
+    controllerAs: 'controller',
     template: require('./home.html')
   };
 };
