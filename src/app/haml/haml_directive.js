@@ -12,7 +12,9 @@ var test = function () {
   return {
     restrict: 'E',
     link: link,
-    template: require('./haml.haml')({}),
+    template: require('./haml.haml')({
+      title: 'I am replacing #{@title}'
+    }),
     scope: {}
   };
 };
