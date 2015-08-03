@@ -1,32 +1,41 @@
-'use strict';
+var path = require('path');
 
 module.exports = {
   entry: {
-    app: './src/app.js'
+    app: [
+      './vendor/angular.src.js',
+      './node_modules/angular-route/angular-route.js',
+      './src/app.js'
+    ]
   },
   output: {
     filename: '[name].js',
     path: './dest',
-    publicPath: './dest/',
+    publicPath: '.',
     chunkFilename: '[id].chunk.js'
-  },
-  resolve: {
-    modulesDirectories: ['node_modules'],
-    alias: {
-      'npm': __dirname + '/node_modules',
-      'vendor': __dirname + '/src/vendor/'
-    }
   },
   module: {
     loaders: [
-      {test: /\.sass$/, loader: 'style!css!sass?indentedSyntax=true'},
+      {test: /\.js$/, loader: 'babel', include: path.resolve('src')},
+      {test: /\.css$/, loader: 'style!css?sourceMap'},
+      {test: /\.sass$/, loader: 'style!css?sourceMap!sass?sourceMap&indentedSyntax=true'},
       {test: /\.(png|jpg)$/, loader: 'url?limit=32768'},
       {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'},
       {test: /\.haml$/, loader: 'hamlc-loader'}
     ],
     noParse: [
-      /node_modules\/angular/
+      /angular\.src\.js/
     ]
   },
-  devtool: 'eval'
+  devtool: 'eval',
+  devServer: {
+    hot: true,
+    historyApiFallback: true,
+    stats: {
+      chunkModules: false,
+      colors: true
+    },
+    contentBase: '.',
+    publicPath: '.'
+  }
 };

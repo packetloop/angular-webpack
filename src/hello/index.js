@@ -1,8 +1,4 @@
-'use strict';
-
-var angular = require('vendor/angular');
-
-var hello = angular.module('hello', [
+const hello = angular.module('hello', [
   require('./../blah/index').name
 ]);
 

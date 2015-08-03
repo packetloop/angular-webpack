@@ -1,12 +1,9 @@
-'use strict';
-
-var angular = require('vendor/angular');
-var app = angular.module('app', [
-  require('vendor/angular_route').name
+const app = angular.module('app', [
+  'ngRoute'
 ]);
 
-app.config(require('./app/app_register_config')(app));
 app.config(require('./app/app_router_config')(app));
 
-module.exports = app;
-global.window.app = app;
+app.run(['$injector', $injector => app.register = $injector.loadModule.bind($injector)]);
+
+export default app;

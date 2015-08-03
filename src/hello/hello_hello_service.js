@@ -1,10 +1,8 @@
-'use strict';
+const $inject = [];
+const HelloHelloService = function () {
+  this.hello = () => 'hello';
+};
 
-function HelloHelloService() {
-  this.hello = function () {
-    return 'hello';
-  };
-}
-HelloHelloService.$inject = [];
+HelloHelloService.$inject = $inject;
 
-module.exports = HelloHelloService;
+export default HelloHelloService;

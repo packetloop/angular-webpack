@@ -1,11 +1,7 @@
-'use strict';
-
-var angular = require('vendor/angular');
-
 describe('Hello Service', function () {
-  var service;
-  var helloHelloService;
-  var blahService;
+  let service;
+  let helloHelloService;
+  let blahService;
 
   beforeEach(angular.mock.module(require('./index.js').name));
 
@@ -20,34 +16,25 @@ describe('Hello Service', function () {
     service = $injector.get('HelloService');
   }));
 
-
-  describe('.hello', function () {
-
+  describe('.hello', () => {
     it('should have `hello` method', function () {
       expect(service.hello).toBeDefined();
     });
-
 
     it('should call HelloHelloService::hello', function () {
       service.hello();
       expect(helloHelloService.hello).toHaveBeenCalled();
     });
 
-
     it('should call BlahService::blah', function () {
       service.hello();
       expect(blahService.blah).toHaveBeenCalled();
     });
-
 
     it('should return mocked `test` value', function () {
       helloHelloService.hello.and.returnValue('1234');
       blahService.blah.and.returnValue('qwer');
       expect(service.hello()).toEqual('1234qwer');
     });
-
   });
-
 });
-
-
