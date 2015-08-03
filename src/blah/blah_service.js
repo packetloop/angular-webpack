@@ -1,11 +1,8 @@
-'use strict';
-
-var $inject = [];
-var BlahService = function () {
-  this.blah = function () {
-    return 'blah';
-  };
+const $inject = [];
+const BlahService = function () {
+  this.blah = () => 'blah';
 };
+
 BlahService.$inject = $inject;
 
 module.exports = BlahService;

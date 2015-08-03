@@ -6,6 +6,10 @@
     "jasmine": true
   },
 
+  "globals": {
+    "angular": true
+  },
+
   "ecmaFeatures": {
     "arrowFunctions": true,
     "binaryLiterals": true,

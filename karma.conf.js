@@ -1,12 +1,34 @@
-'use strict';
+var path = require('path');
+var hasCoverage = global.process.argv.reduce(function (result, arg) {
+  return arg.indexOf('coverage') !== -1 || result;
+});
 
-var webpackConfig = require('./webpack.config');
-webpackConfig.cache = true;
-webpackConfig.module.postLoaders = [{
-  test: /\.js$/,
-  exclude: /(_spec|vendor|node_modules)/,
-  loader: 'istanbul-instrumenter'
-}];
+var include = [
+  path.resolve('./src')
+];
+
+var preLoaders = hasCoverage ? [
+
+  // Process test code with Babel
+  {test: /_spec\.js$/, loader: 'babel', include: include},
+
+  // Process all non-test code with Isparta
+  {test: /\.js$/, loader: 'isparta', include: include, exclude: /_spec\.js$/}
+] : [
+  {test: /\.js$/, loader: 'babel', include: include}
+];
+var loaders = [
+  {test: /\.sass$/, loader: 'style!css?sourceMap!sass?sourceMap&indentedSyntax=true'},
+  {test: /\.png$/, loader: 'null'},
+  {test: /\.jpg$/, loader: 'null'},
+
+  // Loader for JSON, may be used in some tests
+  {test: /\.json$/, loader: 'json'},
+
+  // Need some real loaders for HTML, because angular directives are coupled with templates
+  {test: /\.haml$/, loader: 'hamlc-loader'},
+  {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'}
+];
 
 
 module.exports = function (config) {
@@ -14,20 +36,23 @@ module.exports = function (config) {
     basePath: '',
     frameworks: ['jasmine'],
     files: [
-      'node_modules/angular/angular.js',
-      'node_modules/angular-mocks/angular-mocks.js',
-      'src/**/*_spec.js'
+      'spec.js'
     ],
     webpack: {
-      resolve: webpackConfig.resolve,
-      module: webpackConfig.module
+      devtool: 'eval',
+      module: {
+        loaders: loaders,
+        preLoaders: preLoaders
+      },
+      cache: true
     },
-    exclude: [
-      '*.sass',
-      '*.html'
-    ],
+    webpackMiddleware: {
+      stats: {
+        colors: true
+      }
+    },
     preprocessors: {
-      'src/**/*_spec.js': ['webpack']
+      'spec.js': ['webpack']
     },
     reporters: ['progress', 'coverage'],
     coverageReporter: {

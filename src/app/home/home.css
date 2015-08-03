@@ -1,0 +1,15 @@
+.trollface {
+  margin: 5px;
+  width: 300px;
+  height: 200px;
+  background: transparent url("./trollface.png") 0 0 no-repeat;
+  background-size: contain;
+}
+
+.true-story {
+  margin: 5px;
+  width: 300px;
+  height: 200px;
+  background: transparent url("./true-story.png") 0 0 no-repeat;
+  background-size: contain;
+}
