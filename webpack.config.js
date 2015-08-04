@@ -41,7 +41,7 @@ module.exports = {
       inject: 'body'
     })
   ],
-  devtool: 'eval',
+  devtool: 'eval-source-map',
   devServer: {
     historyApiFallback: true,
     stats: {
