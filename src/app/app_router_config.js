@@ -1,39 +1,37 @@
-function route(entry, resolve) {
-  return {
-    template: '<' + entry + '></' + entry + '>',
-    resolve: {
-      async: ['$q', function ($q) {
-        const defer = $q.defer();
+const route = (entry, resolve) => ({
+  template: '<' + entry + '></' + entry + '>',
+  resolve: {
+    async: ['$q', function ($q) {
+      const defer = $q.defer();
 
-        resolve(defer.resolve);
-        return defer.promise;
-      }]
-    }
-  };
-}
+      resolve(defer.resolve);
+      return defer.promise;
+    }]
+  }
+});
 
 
-const routerConfig = app => {
+export default app => {
   const $inject = ['$routeProvider'];
+
+  // We have to use hardcoded value for 'require' so it can be statically built
   const RouterConfig = function ($routeProvider) {
     $routeProvider
+
       .when('/', {template: ''})
-      .when('/home', route('home', callback => {
-        require.ensure([], function () {
-          // We have to use hardcoded value for 'require' so it can be statically built
-          callback(app.register(require('./home').name));
-        });
-      }))
-      .when('/about', route('about', callback => {
-        require.ensure([], function () {
-          callback(app.register(require('./about').name));
-        });
-      }))
-      .when('/haml', route('haml', function (callback) {
-        require.ensure([], function () {
-          callback(app.register(require('./haml').name));
-        });
-      }))
+
+      .when('/home', route('home', callback =>
+        require.ensure([], () =>
+          callback(app.register(require('./home').name)))))
+
+      .when('/about', route('about', callback =>
+        require.ensure([], () =>
+          callback(app.register(require('./about').name)))))
+
+      .when('/haml', route('haml', callback =>
+        require.ensure([], () =>
+          callback(app.register(require('./haml').name)))))
+
       .otherwise({redirectTo: '/'});
   };
 
@@ -41,5 +39,3 @@ const routerConfig = app => {
 
   return RouterConfig;
 };
-
-export default routerConfig;
