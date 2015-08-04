@@ -32,7 +32,7 @@ open ./coverage/index.html
 ```
 
 
-### TODO
+### Features, TODO
 
 - [x] Build basic Angular app with webpack
 - [x] Couple of dependent modules `Hello` and `Blah`
@@ -51,3 +51,12 @@ open ./coverage/index.html
 - [x] FIX dynamic Angular modules loading (fixed in #2)
 - [x] Allow to use HAML templates
 - [x] BabelJS and full ES6/7 support
+
+
+### Demo build
+
+[http://packetloop.github.io/angular-webpack/dest/](http://packetloop.github.io/angular-webpack/dest/)
+
+### Coverage
+
+[http://packetloop.github.io/angular-webpack/coverage/](http://packetloop.github.io/angular-webpack/coverage/)
