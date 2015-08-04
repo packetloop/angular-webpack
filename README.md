@@ -6,19 +6,31 @@ Angular + Webpack build with Karma tests support
 
 ### Install
 
-```
+```sh
 git clone git@github.com:packetloop/angular-webpack.git
 cd angular-webpack
 npm install
-npm run build
+npm start
 ```
 
-Then open `index.html`
+Then 
+
+```sh
+open http://localhost:8080
+```
 
 To run tests
-```
+
+```sh
 npm test
 ```
+
+Coverage
+
+```sh
+open ./coverage/index.html
+```
+
 
 ### TODO
 
@@ -32,8 +44,10 @@ npm test
 - [x] Separate HTML template for `<hello>` + webpack build
 - [x] Separate CSS for `<hello>` + webpack build
 - [x] Embed images
-- [x] Coverage report
+- [x] Coverage report with full ES6 support
 - [x] Multiple pages to load additional components asynchronously
-- [x] Gulp + JSHint
-- [ ] FIX dynamic Angular modules loading (see issue #2)
+- [x] ESLint `npm run lint`
+- [x] ESLint loader for compile-time validation
+- [x] FIX dynamic Angular modules loading (fixed in #2)
 - [x] Allow to use HAML templates
+- [x] BabelJS and full ES6/7 support
