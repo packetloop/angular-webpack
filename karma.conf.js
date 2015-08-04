@@ -57,9 +57,7 @@ module.exports = function (config) {
     reporters: ['progress', 'coverage'],
     coverageReporter: {
       dir: 'coverage/',
-      subdir: function (browser) {
-        return browser.toLowerCase().split(/[ /-]/)[0];
-      },
+      subdir: '.',
       reporters: [
         {type: 'cobertura', file: 'cobertura.xml'},
         {type: 'text', file: 'text.txt'},
