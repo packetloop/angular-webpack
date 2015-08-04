@@ -29,6 +29,7 @@ module.exports = {
       {test: /\.html$/, loader: 'ng-cache?prefix=[dir]/[dir]'},
       {test: /\.haml$/, loader: 'hamlc-loader'}
     ],
+    preLoaders: [{test: /\.js$/, loader: 'eslint', include: path.resolve('src')}],
     noParse: [
       /angular\.src\.js/
     ]
@@ -48,5 +49,8 @@ module.exports = {
       colors: true
     },
     contentBase: './src'
+  },
+  eslint: {
+    configFile: 'src/.eslintrc'
   }
 };
