@@ -51,6 +51,7 @@ open ./coverage/index.html
 - [x] FIX dynamic Angular modules loading (fixed in #2)
 - [x] Allow to use HAML templates
 - [x] BabelJS and full ES6/7 support
+- [x] Running tests in PhantomJS
 
 
 ### Demo build

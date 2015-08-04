@@ -1,5 +1,6 @@
 var testsContext;
 
+require('babel-core/polyfill');
 require('./vendor/angular.src');
 require('angular-mocks');
 
